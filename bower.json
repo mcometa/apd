@@ -1,0 +1,19 @@
+{
+  "name": "apd",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Marc Cometa"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mcometa/apd",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,17 @@
+//! Main Styles Manifest
+
+@import "lib/normalize";
+@import "settings/helpers";
+@import "settings/variables";
+
+@import "components/loader";
+
+
+html {
+  background: url(/assets/img/img.jpg) no-repeat fixed center top;
+  background-size: cover;
+}
+
+.container {
+  padding: 2em;
+}
