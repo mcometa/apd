@@ -1,18 +1,87 @@
 //! Main Styles Manifest
 
-@import "lib/normalize";
-@import "../../bower_components/include-media/dist/include-media";
 @import "settings/helpers";
 @import "settings/variables";
 
+@import "lib/normalize";
+@import "../../bower_components/include-media/dist/include-media";
+
+@import "base/base";
+@import "base/typo";
+
+@import "layout/container";
+
 @import "components/loader";
+@import "components/repo-card";
 
 
 html {
-  background: url(/assets/img/img.jpg) no-repeat fixed center top;
+  background: url(../img/img.jpg) no-repeat fixed center top;
   background-size: cover;
+  font-family: Avenir;
 }
 
 .container {
   padding: 2em;
+
+  @include media('>phone') {
+    padding: 1em;
+  }
+}
+
+.repo-wrap {
+  border: solid #fff;
+  border-width: 0 1px 1px;
+  padding: 0 64px 64px 64px;
+  margin-top: 24px;
+
+  @include media('<=640px'){
+    padding: 1em;
+  }
+
+  > h3 {
+    color: #fff;
+    line-height: 16px;
+      margin-top: -9px;
+      margin-bottom: 50px;
+
+    @include media('>=desktop') {
+      margin-left: -64px;
+      margin-right: -64px;
+      position: relative;
+      font-weight: normal;
+
+      &:before {
+        content: '';
+        background-color: #fff;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        right: 64%;
+        top: 50%;
+      }
+
+      &:after {
+        content: '';
+        background-color: #fff;
+        height: 1px;
+        position: absolute;
+        left: 64%;
+        right: 0;
+        top: 50%;
+      }
+    }
+
+    > strong {
+      font-weight: bold;
+    }
+  }
+}
+
+.twitter-icon {
+  background: url(../img/twitter-logo.svg) no-repeat center center;
+  background-size: cover;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
 }

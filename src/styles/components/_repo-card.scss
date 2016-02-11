@@ -1,9 +1,50 @@
 //! Repo Card
 
 .repo-card {
-  width: 100%;
+
+  @include media('>=640px') {
+    width: 50%;
+    float: left;
+  }
 
   @include media('>=desktop') {
+    float: left;
     width: 33.3333%;
+  }
+
+  > .content {
+    margin: 1em;
+    background: map-get($repoCard, 'bgColor');
+
+    > .avatar {
+      background-size: cover;
+      display: block;
+      height: 120px;
+      overflow: hidden;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    > .info {
+      padding: 10px;
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        &.name {
+          text-overflow: ellipsis;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

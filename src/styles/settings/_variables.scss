@@ -1,3 +1,13 @@
 
 $loaderColor: #fff;
 $testVar: 3px;
+
+$repoCard: (
+  'bgColor': #fff
+);
+
+$breakpoints: (
+  'phone': 414px,
+  'tablet': 768px,
+  'desktop': 1024px
+) !default;

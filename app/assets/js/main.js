@@ -14,14 +14,14 @@ var MAIN = {
           $loader.remove();
 
           // Populate the repo container
-          $repoContainer.append('<div id="repo-'+repo.id+'" class="repo-card">'+
-              '<img src="https://avatars3.githubusercontent.com/u/'+repo.owner.id+'?=v2&s=480" alt="" class="avatar">'+
+          $repoContainer.append('<div id="repo-'+repo.id+'" class="repo-card"><div class="content">'+
+              '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background-image:url(https://avatars3.githubusercontent.com/u/'+repo.owner.id+'?=v2&s=480)" alt="" class="avatar">'+
               '<div class="info">'+
-                '<p class="name">'+repo.name+'</p>'+
-                '<p class="dateupdated">'+MAIN.helpers.convertDate(repo.updated_at)+'</p>'+
-                '<p class="watchers">'+repo.watchers_count+'</p>'+
+                '<p class="name" title="'+repo.name+'">'+repo.name+'</p>'+
+                '<p class="dateupdated">Last Updated: '+MAIN.helpers.convertDate(repo.updated_at)+'</p>'+
+                '<p class="watchers">Watchers: '+repo.watchers_count+'</p>'+
               '</div>'+
-            '</div>');
+            '</div></div>');
         })
       }
     })
