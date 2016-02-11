@@ -1,0 +1,9 @@
+//! Repo Card
+
+.repo-card {
+  width: 100%;
+
+  @include media('>=desktop') {
+    width: 33.3333%;
+  }
+}
